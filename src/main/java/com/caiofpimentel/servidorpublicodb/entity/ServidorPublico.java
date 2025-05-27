@@ -1,6 +1,10 @@
 package com.caiofpimentel.servidorpublicodb.entity;
 
+import org.springframework.beans.factory.annotation.Value;
+
+import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,8 +16,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table(name = "servidorpublico")
 public class ServidorPublico {
-
+    
+    @Id   
     private Long matricula;
+
     private String nome;
     private String foto;
     private String orgao;
